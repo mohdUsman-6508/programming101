@@ -31,17 +31,21 @@ public class maps {
 
         /////////////iterating on map
         for (Map.Entry<String, Integer> e : mp.entrySet()) {
-            System.out.println(e);
-            System.out.println(e.getKey());
-            System.out.println(e.getValue());
+            System.out.print(e);
+            System.out.println();
+            System.out.print(e.getKey());
+            System.out.println();
+            System.out.print(e.getValue());
         }
 
         for (String k : mp.keySet()) {
-            System.out.println(k);
+            System.out.print(k+" ");
         }
+        System.out.println();
         for (Integer v : mp.values()) {
-            System.out.println(v);
+            System.out.print(v+" ");
         }
+        System.out.println();
         mp.remove("tone");
         System.out.println(mp.containsKey("tone"));
         System.out.println(mp.containsValue(9));

@@ -8,7 +8,7 @@ public class priorityQueue {
     public static void main(String[] args) {
         Queue<Integer> pq=new PriorityQueue<>();
 
-        pq.offer(10);
+        pq.offer(510);
         pq.offer(5);
         pq.offer(20);
         pq.offer(1);

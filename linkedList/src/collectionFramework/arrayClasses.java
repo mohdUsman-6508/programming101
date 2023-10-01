@@ -23,5 +23,28 @@ public class arrayClasses {
         for (boolean val:arr1){
             System.out.print(val+" ");
         }
+
+        int[] a={1,2,3,3,2,1,-4,0};
+        int[] dp=new int[6];
+
+        System.out.println();
+        System.out.println("----------Revision----------");
+        //forEach
+        for(int val:dp){
+            System.out.print(val+" ");
+        }
+        //fill
+        Arrays.fill(dp,-1);
+        System.out.println();
+        for(int val:dp) System.out.print(val+" ");
+        System.out.println();
+        for(int val:a) System.out.print(val+" ");
+        ///sort
+        Arrays.sort(a);
+        System.out.println();
+        for(int val:a) System.out.print(val+" ");
+        ////binarySearch
+        System.out.println(Arrays.binarySearch(arr,8));
+
     }
 }

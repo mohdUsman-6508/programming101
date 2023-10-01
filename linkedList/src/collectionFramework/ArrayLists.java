@@ -33,7 +33,7 @@ public class ArrayLists {
         list.remove(2);
         System.out.println(list);
 
-        list2.set(1, 39);
+        list2.set(0, 39);
         System.out.println(list2);
 
         System.out.println(list.contains(30));
