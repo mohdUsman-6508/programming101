@@ -118,6 +118,7 @@ public class LL {
             temp = temp.next;
         }
         temp.next = temp.next.next;
+        size--;
         return temp.next;
 
     }
@@ -132,10 +133,30 @@ public class LL {
         System.out.println("null");
     }
 
-    //getsize
+    //get functionality
 
     public void size() {
         System.out.println("size: " + size);
+    }
+
+    public int get(int index) {
+        Node node = head;
+        if (head == null) return head.value;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node.value;
+    }
+
+    public boolean find(int value) {
+        Node node = head;
+        while (node != null) {
+            if (node.value == value) {
+                return true;
+            }
+            node = node.next;
+        }
+        return false;
     }
 
 }
