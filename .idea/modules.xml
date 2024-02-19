@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/IdeaProjects.iml" filepath="$PROJECT_DIR$/IdeaProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedListEvolution/LinkedListEvolution.iml" filepath="$PROJECT_DIR$/LinkedListEvolution/LinkedListEvolution.iml" />
       <module fileurl="file://$PROJECT_DIR$/NonLinearDS/NonLinearDS.iml" filepath="$PROJECT_DIR$/NonLinearDS/NonLinearDS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortingEvolution/SortingEvolution.iml" filepath="$PROJECT_DIR$/SortingEvolution/SortingEvolution.iml" />
       <module fileurl="file://$PROJECT_DIR$/helloworld/helloworld.iml" filepath="$PROJECT_DIR$/helloworld/helloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkedList/linkedList.iml" filepath="$PROJECT_DIR$/linkedList/linkedList.iml" />
     </modules>
