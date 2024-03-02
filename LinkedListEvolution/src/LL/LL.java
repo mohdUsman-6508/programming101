@@ -176,4 +176,40 @@ public class LL {
         return false;
     }
 
+    /// remove duplicates
+
+    public void removeDuplicate() {
+        Node temp = head;
+        while (temp.next != null) {
+            if (temp.value == temp.next.value ) {
+                    temp.next = temp.next.next;
+                    size--;
+            }
+            else{
+                temp = temp.next;
+            }
+        }
+
+//        Node temp1 = head;
+//        while (temp != null) {
+//            if (temp1.value != temp.value) {
+//                temp1.next = temp;
+//                temp1 = temp;
+//                size--;
+//            }
+//            if (temp1.value == temp.value && temp.next == null) {
+//                temp1.next = null;
+//                size--;
+//            }
+//            temp = temp.next;
+//        }
+    }
+
+
+    /// merge list
+
+
+
+
+
 }
