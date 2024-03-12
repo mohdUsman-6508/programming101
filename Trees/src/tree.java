@@ -17,7 +17,7 @@ public class tree {
 
     }
 
-    private Node root;
+    public Node root;
 
     public void populate(Scanner scanner) {
         System.out.println("enter the root node: ");
