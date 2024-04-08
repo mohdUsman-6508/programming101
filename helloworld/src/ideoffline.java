@@ -94,8 +94,7 @@ public class ideoffline {
 
     public static void main(String[] args) {
 
-        Stack st =new Stack();
-        Queue q=new Queue();
+
     }
 
 

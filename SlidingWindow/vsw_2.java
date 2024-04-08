@@ -46,12 +46,7 @@ public class vsw_2 {
         while (j < str.length()) {
             //calculations
             char ch = str.charAt(j);
-            if (hm.containsKey(ch)) {
-                int val = hm.get(ch);
-                val++;
-                hm.put(ch, val);
-            } else hm.put(ch, 1);
-
+            hm.put(ch,hm.getOrDefault(ch,0)+1);
             //////
             if (hm.size() < 3) {//condition<k
                 j++;

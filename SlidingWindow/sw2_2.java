@@ -11,23 +11,24 @@ public class sw2_2 {
 
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if (hmStr.containsKey(c)) {
-                int valCount = hmStr.get(c);
-                valCount++;
-                hmStr.put(c, valCount);
-            } else hmStr.put(c, 1);
+            hmStr.put(c, hmStr.getOrDefault(c, 0) + 1);
+//            if (hmStr.containsKey(c)) {
+//                int valCount = hmStr.get(c);
+//                valCount++;
+//                hmStr.put(c, valCount);
+//            } else hmStr.put(c, 1);
         }
         System.out.println(hmStr);
         ///
 
         int j = 0;
         int i = 0;
-        int countAnagrams=0;
+        int countAnagrams = 0;
 
         while (j < word.length()) {
 
             if (j - i + 1 < str.length()) {
-                char w=word.charAt(j);
+                char w = word.charAt(j);
 //                System.out.println(w);
                 if (hmStr.containsKey(w)) {
 //                    System.out.println("working");
@@ -41,17 +42,17 @@ public class sw2_2 {
                 }
                 j++;
             } else if (j - i + 1 == str.length()) {
-                if (hmStr.isEmpty()){
+                if (hmStr.isEmpty()) {
 //                    System.out.println("works!!");
                     countAnagrams++;
-                    hmStr.put(word.charAt(i),1);
+                    hmStr.put(word.charAt(i), 1);
                 }
                 i++;
             }
 
         }
 
-        System.out.println("No.of Anagrams: "+ countAnagrams);
+        System.out.println("No.of Anagrams: " + countAnagrams);
 
 
     }
