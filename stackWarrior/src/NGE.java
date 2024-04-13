@@ -3,7 +3,7 @@ import java.util.Stack;
 public class NGE {
     public static void main(String[] args) {
 
-        int[] elements = {1, 3, 2, 4};
+        int[] elements = {1, 3, 0, 0, 1, 2, 4};
 
         int[] nge = new int[elements.length];
         display(elements);
@@ -39,25 +39,22 @@ public class NGE {
     public static void nextGreater(int[] elem, int[] nge) {
         int n = nge.length;
         Stack<Integer> st = new Stack<>();
-        for (int i = 0; i < elem.length; i++) {
-            st.push(elem[i]);
-        }
-        nge[n - 1] = -1;
-        int tempGreater = -1;
-        for (int i = n - 1; i > 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             //O(n2) to O(n)
-            int peek = st.peek();
-            if (elem[i - 1] < peek) {
-                tempGreater = peek;
-                nge[i - 1] = tempGreater;
+
+            if (st.isEmpty()) {
+                nge[i] = -1;
+            } else if (elem[i] < st.peek()) {
+                nge[i] = st.peek();
+            } else if (elem[i] >=st.peek()) {
+                while (elem[i] >=st.peek() && !st.isEmpty()) {
+                    st.pop();
+                }
+                if (!st.isEmpty())
+                    nge[i] = st.peek();
+                else nge[i] = -1;
             }
-            else if(elem[i-1]>peek && elem[i-1]>tempGreater){
-                nge[i-1]=-1;
-            }
-            else {
-                nge[i - 1] = tempGreater;
-            }
-            st.pop();
+            st.push(elem[i]);
         }
     }
 
