@@ -5,13 +5,41 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        int arr[] = {1, 2, 3, 4, 5};
-        int ind = 2;
-        int ele = 9;
-        arr = delete(arr, ind);
-        System.out.println(Arrays.toString(arr));
-        int narr[] = insert(arr, ele, ind);
-        System.out.println(Arrays.toString(narr));
+        int[] arr={1,2,3,4,5,4,2,3,2};
+
+        int i=0,j=0;
+        int sum=0,k=4;
+        int m=0,n=0;
+
+
+        while(j<arr.length){
+            sum+=arr[j];
+            if(sum<k){
+                j++;
+            }
+            else if(sum==k){
+                m=i;
+                n=j;
+                System.out.println("sum;"+sum);
+            }
+            else{
+                while(sum>k){
+                    sum-=arr[i];
+                    i++;
+                }
+                j++;
+                if(sum==k){
+                    m=i;
+                    n=j;
+
+                }
+            }
+
+        }
+
+        for(int l=m;l<n;l++){
+            System.out.print(arr[l]+" ");
+        }
     }
 
     static int[] delete(int arr[], int ind) {
