@@ -1,14 +1,14 @@
 package longest_common_subsequence;
 
-public class tabulation {
+public class longesSubstring {
     public static void main(String[] args) {
-        String x = "abde";
-        String y = "acob";
+        String x = "abcde";
+        String y = "abfce";
         String z = "";
 
         int m = x.length();
         int n = y.length();
-        System.out.println(m +" " + n);
+
         int[][] t = new int[m + 1][n + 1];
         for (int i = 0; i <= m; i++) {
             for (int j = 0; j <= n; j++) {
@@ -16,14 +16,20 @@ public class tabulation {
             }
         }
 
+        int max=Integer.MIN_VALUE;
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
                 if (x.charAt(i - 1) == y.charAt(j - 1)) {
                     t[i][j] = 1 + t[i - 1][j - 1];
                 } else {
-                    t[i][j] = Math.max(t[i - 1][j], t[i][j - 1]);
+                    t[i][j] = 0;
+                }
+
+                if(max<t[i][j]){
+                    max=t[i][j];
                 }
             }
+
         }
         for (int i = 0; i <= m; i++) {
             for (int j = 0; j <= n; j++) {
@@ -34,10 +40,7 @@ public class tabulation {
             System.out.println();
         }
 
-        System.out.println(t[m][n]);
-
-
-
+        System.out.println(max);
 
     }
 }
