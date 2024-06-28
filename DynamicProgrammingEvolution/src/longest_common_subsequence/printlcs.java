@@ -1,8 +1,8 @@
 package longest_common_subsequence;
 public class printlcs {
     public static void main(String[] args) {
-            String x = "abde";
-            String y = "acob";
+            String x = "abbdde";
+            String y = "abbdde";
             String z = "";
 
             int m = x.length();
