@@ -1,6 +1,7 @@
 import StaticRise.Human;
 import arrayAutomate.ArrayO;
 
+
 public class Main {
 
     static int a=4;
@@ -51,9 +52,25 @@ public class Main {
 //        Main obj2=new Main();
 //        System.out.println(Main.a+" " + Main.b);
 
+//
+//        Human.Single s=Human.Single.getInstance();
+//        Human.Single k=Human.Single.getInstance();
 
-        Human.Single s=Human.Single.getInstance();
-        Human.Single k=Human.Single.getInstance();
+
+        TODO todo=new TODO();
+        todo.addTask("Study Operating System");
+        todo.addTask("Study Object Oriented Programming");
+        todo.addTask("Do DSA problem solving");
+
+//
+        todo.showList();
+        todo.markAsComplete();
+        todo.getNumberOfTask();
+
+    TODO shoppingList=new TODO("Rice 5kg");
+    shoppingList.showList();
+    shoppingList.getNumberOfTask();
+    shoppingList.markAsComplete();
 
 
     }
