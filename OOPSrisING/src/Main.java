@@ -4,14 +4,26 @@ import arrayAutomate.ArrayO;
 
 public class Main {
 
-    static int a=4;
-    static int b;
+//    static int a=4;
+//    static int b;
 
-    static{//run only once when class is loaded
-        System.out.println("i am in static block");
-        b=a*5;
-    }
+//    static{//run only once when class is loaded
+//        System.out.println("i am in static block");
+//        b=a*5;
+//    }
     public static void main(String[] args) {
+
+        TODO sl=new TODO();
+
+        sl.addTask("Study Education chapter 1");
+        sl.addTask("Egg 10");
+        sl.addTask("Daal Urad ki 1kg");
+
+        sl.showList();
+        sl.markAsComplete();
+        sl.showList();
+        sl.getNumberOfTask();
+
 //        System.out.println("Hello world!");
 //        int[] arr1={-1,-2,-3,3,2,1};
 //        ArrayO arr=new ArrayO(arr1);
@@ -57,20 +69,7 @@ public class Main {
 //        Human.Single k=Human.Single.getInstance();
 
 
-        TODO todo=new TODO();
-        todo.addTask("Study Operating System");
-        todo.addTask("Study Object Oriented Programming");
-        todo.addTask("Do DSA problem solving");
 
-//
-        todo.showList();
-        todo.markAsComplete();
-        todo.getNumberOfTask();
-
-    TODO shoppingList=new TODO("Rice 5kg");
-    shoppingList.showList();
-    shoppingList.getNumberOfTask();
-    shoppingList.markAsComplete();
 
 
     }
