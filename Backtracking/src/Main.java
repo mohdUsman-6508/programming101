@@ -24,15 +24,12 @@ public class Main {
     }
 
     private static int[] getFreq(Character[] arr) {
-
         int[] freq=new int[26];
         for (int i=0;i<arr.length;i++){
             int idx=arr[i]-97;
             freq[idx]++;
         }
-
         return freq;
-
     }
 
     private static void subsetString(String[] arr, List<List<String>> list, List<String> strList, int idx) {

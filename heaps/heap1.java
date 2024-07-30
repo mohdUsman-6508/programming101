@@ -12,7 +12,7 @@ public class heap1 {
         pq.add(20);
         pq.add(10);
         pq.add(9);
-        System.out.println(pq);
+        System.out.println("pq"+pq);
         int len = pq.size();
         for (int i = 0; i < len; i++) {
             System.out.print(pq.poll()+" ");
